@@ -1,0 +1,146 @@
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 1000px;
+    justify-content: space-between;
+}
+.row {
+    width: 430px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 10px 5px purple;
+    padding: 10px 10px 10px 20px;
+    gap: 20px;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-content: start;
+    
+    
+}
+.row .circle {
+
+}
+
+.circle {
+    
+    width: 60px;
+    height: 60px;
+    background-color: aqua;
+    border-radius: 50%;
+    display: flex;
+    font-size: 14px;
+    place-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.circle:hover{
+    border: 2px solid #000000;
+    transition: 0.2s;
+    transform: scale(1.2);
+}
+/* .hidden {
+    display: none;
+} */
+
+.button {
+    position: absolute;
+    top:30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 75px;
+    justify-content: space-between;
+    z-index: 20;
+}
+
+.btn{
+    width: 70px;
+    height: 30px;
+    background: rgb(188,27,195);
+    background: linear-gradient(90deg, rgba(188,27,195,1) 28%, rgba(171,207,85,1) 100%);
+    border-radius: 15px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.message{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    
+}
+@media(max-width: 1050px){
+    .container {
+        flex-direction: column;
+        gap:80px;
+        top: 50%;
+        margin-left: 50%;
+    }    
+    .row {
+        width: 310px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        flex-wrap: wrap;
+        box-shadow: 0px 0px 10px 5px purple;
+        padding: 10px 10px 10px 10px;
+        gap: 20px;
+        min-height: 300px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        align-content: start;
+        
+    }
+    .circle {
+        width: 40px;
+        height: 40px;
+        background-color: aqua;
+        border-radius: 50%;
+        display: flex;
+        font-size: 12px;
+        place-items: center;
+        justify-content: center;
+    }
+    .button {
+        
+        top:50%;
+        margin-left: 15%;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width:150px;
+        justify-content: space-between;
+        z-index: 20;
+    }
+    .btn {
+    
+    }
+    .message{
+            top: 5%;
+            margin-left: 15%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+    }
+}
